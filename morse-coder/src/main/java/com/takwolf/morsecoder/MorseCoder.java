@@ -95,16 +95,16 @@ public final class MorseCoder {
             throw new IllegalArgumentException("Text should not be null.");
         }
         text = text.toUpperCase();
-        StringBuilder morse = new StringBuilder();
+        StringBuilder morseBuilder = new StringBuilder();
         for (int i = 0; i < text.codePointCount(0, text.length()); i++) {
             int codePoint = text.codePointAt(i);
-            String value = alphabets.get(codePoint);
-            if (value == null) {
+            String word = alphabets.get(codePoint);
+            if (word == null) {
                 throw new RuntimeException("Unsupport code point : " + codePoint);
             }
-            morse.append(value.replace('0', dit).replace('1', dah)).append(split);
+            morseBuilder.append(word.replace('0', dit).replace('1', dah)).append(split);
         }
-        return morse.toString();
+        return morseBuilder.toString();
     }
 
     public String decode(String morse) {
@@ -115,15 +115,15 @@ public final class MorseCoder {
             throw new IllegalArgumentException("Incorrect morse.");
         }
         String[] words = StringUtils.split(morse, split);
-        StringBuilder text = new StringBuilder();
+        StringBuilder textBuilder = new StringBuilder();
         for (String word : words) {
             Integer codePoint = dictionaries.get(word.replace(dit, '0').replace(dah, '1'));
             if (codePoint == null) {
                 throw new RuntimeException("Unsupport word : " + word);
             }
-            text.appendCodePoint(codePoint);
+            textBuilder.appendCodePoint(codePoint);
         }
-        return text.toString();
+        return textBuilder.toString();
     }
 
 }
