@@ -110,7 +110,7 @@ morseCoder.decode("...././.-../.-../---/-....-/.--/---/.-./.-../-../-.-.--/ |
 解码时反之。
 
 该思路来源于：[https://github.com/hustcc/xmorse](https://github.com/hustcc/xmorse)
-你也可以通过这个网址进行在线测试：[http://git.hust.cc/xmorse/](http://git.hust.cc/xmorse)
+你也可以通过这个网址进行在线测试：[http://git.hust.cc/xmorse](http://git.hust.cc/xmorse)
 
 ## Author ##
 
