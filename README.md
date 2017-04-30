@@ -10,7 +10,7 @@ A Java implementation for Morse Code translation. Use non-standard way to suppor
 
 ## 关于摩尔斯电码 ##
 
-请参考：[维基百科：摩尔斯电码](https://zh.wikipedia.org/wiki/%E6%91%A9%E5%B0%94%E6%96%AF%E7%94%B5%E7%A0%81)
+请参考：[维基百科：摩尔斯电码](https://zh.wikipedia.org/wiki/摩尔斯电码)
 
 ## 用法 ##
 
