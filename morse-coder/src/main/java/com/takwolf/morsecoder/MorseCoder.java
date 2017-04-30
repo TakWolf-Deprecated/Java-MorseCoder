@@ -100,7 +100,7 @@ public final class MorseCoder {
             int codePoint = text.codePointAt(i);
             String word = alphabets.get(codePoint);
             if (word == null) {
-                throw new RuntimeException("Unsupport code point : " + codePoint);
+                word = Integer.toBinaryString(codePoint);
             }
             morseBuilder.append(word.replace('0', dit).replace('1', dah)).append(split);
         }
@@ -117,9 +117,10 @@ public final class MorseCoder {
         String[] words = StringUtils.split(morse, split);
         StringBuilder textBuilder = new StringBuilder();
         for (String word : words) {
-            Integer codePoint = dictionaries.get(word.replace(dit, '0').replace(dah, '1'));
+            word = word.replace(dit, '0').replace(dah, '1');
+            Integer codePoint = dictionaries.get(word);
             if (codePoint == null) {
-                throw new RuntimeException("Unsupport word : " + word);
+                codePoint = Integer.valueOf(word, 2);
             }
             textBuilder.appendCodePoint(codePoint);
         }
