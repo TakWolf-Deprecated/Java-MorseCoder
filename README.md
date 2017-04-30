@@ -4,6 +4,8 @@
 [![Download](https://api.bintray.com/packages/takwolf/maven/Java-MorseCoder/images/download.svg)](https://bintray.com/takwolf/maven/Java-MorseCoder/_latestVersion)
 [![License](https://img.shields.io/github/license/TakWolf/Java-MorseCoder.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0)
 
+实现上，参考了该项目：[https://github.com/hustcc/xmorse](https://github.com/hustcc/xmorse)
+
 ## Author ##
 
 TakWolf
