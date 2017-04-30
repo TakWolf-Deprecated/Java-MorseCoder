@@ -40,7 +40,7 @@ bintray {
     pkg {
         repo = 'maven'
         name = 'Java-MorseCoder'
-        desc = 'The Java implementation for morse code translation.'
+        desc = 'A Java implementation for Morse Code translation.'
         websiteUrl = 'https://github.com/TakWolf/Java-MorseCoder'
         issueTrackerUrl = 'https://github.com/TakWolf/Java-MorseCoder/issues'
         vcsUrl = 'https://github.com/TakWolf/Java-MorseCoder.git'
