@@ -30,19 +30,87 @@ repositories {
 
 ```
 MorseCoder morseCoder = new MorseCoder();
-morseCoder.encode("Hello World!");
-morseCoder.decode("...././.-../.-../---/-....-/.--/---/.-./.-../-../-.-.--/");
+morseCoder.encode("Hello World! |
+morseCoder.decode("...././.-../.-../---/-....-/.--/---/.-./.-../-../-.-.--/ |
 ```
 
 ## 实现 ##
 
 ### 标准字典 ###
 
-TODO
+注意：字母都会转换为大写
+
+| 字符 | 电码 |
+|---|---|
+| A | 01 |
+| B | 1000 |
+| C | 1010 |
+| D | 100 |
+| E | 0 |
+| F | 0010 |
+| G | 110 |
+| H | 0000 |
+| I | 00 |
+| J | 0111 |
+| K | 101 |
+| L | 0100 |
+| M | 11 |
+| N | 10 |
+| O | 111 |
+| P | 0110 |
+| Q | 1101 |
+| R | 010 |
+| S | 000 |
+| T | 1 |
+| U | 001 |
+| V | 0001 |
+| W | 011 |
+| X | 1001 |
+| Y | 1011 |
+| Z | 1100 |
+
+| 字符 | 电码 |
+|---|---|
+| 0 | 11111 |
+| 1 | 01111 |
+| 2 | 00111 |
+| 3 | 00011 |
+| 4 | 00001 |
+| 5 | 00000 |
+| 6 | 10000 |
+| 7 | 11000 |
+| 8 | 11100 |
+| 9 | 11110 |
+
+| 字符 | 电码 |
+|---|---|
+| . | 010101 |
+| , | 110011 |
+| ? | 001100 |
+| ' | 011110 |
+| ! | 101011 |
+| / | 10010 |
+| ( | 10110 |
+| ) | 101101 |
+| & | 01000 |
+| : | 111000 |
+| ; | 101010 |
+| = | 10001 |
+| + | 01010 |
+| - | 100001 |
+| _ | 001101 |
+| " | 010010 |
+| $ | 0001001 |
+| @ | 011010 |
+| （空格） | 100001 |
 
 ### 其他 Unicode 字符 ###
 
-TODO
+编码时，直接将 codePoint 转换为 2 进制字符串，然后 0 替换为短信号，1 替换为长信号。
+解码时反之。
+
+该思路来源于：[https://github.com/hustcc/xmorse](https://github.com/hustcc/xmorse)
+你也可以通过这个网址进行在线测试：[http://git.hust.cc/xmorse/](http://git.hust.cc/xmorse)
 
 ## Author ##
 
@@ -57,7 +125,7 @@ TakWolf
 ```
 Copyright 2015 TakWolf
 
-Licensed under the Apache License, Version 2.0 (the "License");
+Licensed under the Apache License, Version 2.0 (the "License |
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
