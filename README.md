@@ -30,8 +30,8 @@ repositories {
 
 ```
 MorseCoder morseCoder = new MorseCoder();
-morseCoder.encode("Hello World! |
-morseCoder.decode("...././.-../.-../---/-....-/.--/---/.-./.-../-../-.-.--/ |
+morseCoder.encode("Hello World!");
+morseCoder.decode("...././.-../.-../---/-....-/.--/---/.-./.-../-../-.-.--/");
 ```
 
 ## 实现 ##
