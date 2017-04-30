@@ -1,0 +1,53 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'com.jfrog.bintray'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+group 'com.takwolf'
+version '0.0.1'
+
+dependencies {
+    compile 'org.apache.commons:commons-lang3:3.5'
+    testCompile 'junit:junit:4.11'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}
+
+bintray {
+    user = System.getenv('BINTRAY_USER')
+    key = System.getenv('BINTRAY_KEY')
+    configurations = ['archives']
+    publish = true
+    pkg {
+        repo = 'maven'
+        name = 'Java-MorseCoder'
+        desc = 'The Java implementation for morse code translation.'
+        websiteUrl = 'https://github.com/TakWolf/Java-MorseCoder'
+        issueTrackerUrl = 'https://github.com/TakWolf/Java-MorseCoder/issues'
+        vcsUrl = 'https://github.com/TakWolf/Java-MorseCoder.git'
+        licenses = ['Apache-2.0']
+        labels = ['morse']
+        publicDownloadNumbers = true
+        githubRepo = 'TakWolf/Java-MorseCoder'
+        githubReleaseNotesFile = 'README.md'
+    }
+}
