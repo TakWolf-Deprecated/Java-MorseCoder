@@ -8,6 +8,8 @@ A Java implementation for Morse Code translation. Use non-standard way to suppor
 
 摩尔斯电码翻译器的一个 Java 语言实现。使用了非标准方式支持 Unicode 编码。
 
+兼容 Android 环境。
+
 ## 关于摩尔斯电码 ##
 
 请参考：[维基百科：摩尔斯电码](https://zh.wikipedia.org/wiki/摩尔斯电码)
@@ -18,7 +20,7 @@ A Java implementation for Morse Code translation. Use non-standard way to suppor
 
 ```
 dependencies {
-    compile 'com.takwolf:morse-coder:0.0.1'
+    compile 'com.takwolf:morse-coder:0.0.2'
 }
 
 repositories {
