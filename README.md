@@ -22,7 +22,7 @@ A Java implementation for Morse Code translation. Use non-standard way to suppor
 
 ```
 dependencies {
-    compile 'com.takwolf:morse-coder:0.0.2'
+    compile 'com.takwolf:morse-coder:0.0.3'
 }
 
 repositories {

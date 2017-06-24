@@ -6,7 +6,7 @@ sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
 group 'com.takwolf'
-version '0.0.2'
+version '0.0.3'
 
 dependencies {
     compile 'org.apache.commons:commons-lang3:3.5'
