@@ -32,7 +32,7 @@ repositories {
 
 ### Java ###
 
-```
+``` java
 MorseCoder morseCoder = new MorseCoder();
 morseCoder.encode("Hello World!");
 morseCoder.decode("...././.-../.-../---/-...../.--/---/.-./.-../-../-.-.--/");
