@@ -14,6 +14,8 @@ A Java implementation for Morse Code translation. Use non-standard way to suppor
 
 请参考：[维基百科 -> 摩尔斯电码](https://zh.wikipedia.org/wiki/摩尔斯电码)
 
+具体实现思路，请参考文章 [http://blog.takwolf.com/2017/05/02/java-morse-coder](http://blog.takwolf.com/2017/05/02/java-morse-coder)
+
 ## 用法 ##
 
 ### Gradle ###
