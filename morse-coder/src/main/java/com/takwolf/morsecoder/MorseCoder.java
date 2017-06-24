@@ -73,7 +73,6 @@ public final class MorseCoder {
         registeMorse('"', "010010");
         registeMorse('$', "0001001");
         registeMorse('@', "011010");
-        registeMorse(' ', "100001");
     }
 
     private final char dit; // short mark or dot

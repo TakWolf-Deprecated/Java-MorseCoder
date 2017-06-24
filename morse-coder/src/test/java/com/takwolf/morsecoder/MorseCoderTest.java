@@ -10,7 +10,7 @@ public class MorseCoderTest {
     @Test
     public void test0() {
         String text = "Hello World!";
-        String morse = "...././.-../.-../---/-....-/.--/---/.-./.-../-../-.-.--/";
+        String morse = "...././.-../.-../---/-...../.--/---/.-./.-../-../-.-.--/";
         Assert.assertEquals(morseCoder.encode(text), morse);
         Assert.assertEquals(morseCoder.decode(morse), text.toUpperCase());
     }
