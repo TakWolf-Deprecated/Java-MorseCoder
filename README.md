@@ -20,7 +20,7 @@ A Java implementation for Morse Code translation. Use non-standard way to suppor
 
 ### Gradle ###
 
-``` groovy
+``` gradle
 dependencies {
     compile 'com.takwolf:morse-coder:0.0.3'
 }
