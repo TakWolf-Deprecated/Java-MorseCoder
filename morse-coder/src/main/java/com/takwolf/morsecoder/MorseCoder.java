@@ -10,69 +10,69 @@ public final class MorseCoder {
     private static final Map<Integer, String> alphabets = new HashMap<>();    // code point -> morse
     private static final Map<String, Integer> dictionaries = new HashMap<>(); // morse -> code point
 
-    private static void registeMorse(Character abc, String dict) {
+    private static void registerMorse(Character abc, String dict) {
         alphabets.put(Integer.valueOf(abc), dict);
         dictionaries.put(dict, Integer.valueOf(abc));
     }
 
     static {
         // Letters
-        registeMorse('A', "01");
-        registeMorse('B', "1000");
-        registeMorse('C', "1010");
-        registeMorse('D', "100");
-        registeMorse('E', "0");
-        registeMorse('F', "0010");
-        registeMorse('G', "110");
-        registeMorse('H', "0000");
-        registeMorse('I', "00");
-        registeMorse('J', "0111");
-        registeMorse('K', "101");
-        registeMorse('L', "0100");
-        registeMorse('M', "11");
-        registeMorse('N', "10");
-        registeMorse('O', "111");
-        registeMorse('P', "0110");
-        registeMorse('Q', "1101");
-        registeMorse('R', "010");
-        registeMorse('S', "000");
-        registeMorse('T', "1");
-        registeMorse('U', "001");
-        registeMorse('V', "0001");
-        registeMorse('W', "011");
-        registeMorse('X', "1001");
-        registeMorse('Y', "1011");
-        registeMorse('Z', "1100");
+        registerMorse('A', "01");
+        registerMorse('B', "1000");
+        registerMorse('C', "1010");
+        registerMorse('D', "100");
+        registerMorse('E', "0");
+        registerMorse('F', "0010");
+        registerMorse('G', "110");
+        registerMorse('H', "0000");
+        registerMorse('I', "00");
+        registerMorse('J', "0111");
+        registerMorse('K', "101");
+        registerMorse('L', "0100");
+        registerMorse('M', "11");
+        registerMorse('N', "10");
+        registerMorse('O', "111");
+        registerMorse('P', "0110");
+        registerMorse('Q', "1101");
+        registerMorse('R', "010");
+        registerMorse('S', "000");
+        registerMorse('T', "1");
+        registerMorse('U', "001");
+        registerMorse('V', "0001");
+        registerMorse('W', "011");
+        registerMorse('X', "1001");
+        registerMorse('Y', "1011");
+        registerMorse('Z', "1100");
         // Numbers
-        registeMorse('0', "11111");
-        registeMorse('1', "01111");
-        registeMorse('2', "00111");
-        registeMorse('3', "00011");
-        registeMorse('4', "00001");
-        registeMorse('5', "00000");
-        registeMorse('6', "10000");
-        registeMorse('7', "11000");
-        registeMorse('8', "11100");
-        registeMorse('9', "11110");
+        registerMorse('0', "11111");
+        registerMorse('1', "01111");
+        registerMorse('2', "00111");
+        registerMorse('3', "00011");
+        registerMorse('4', "00001");
+        registerMorse('5', "00000");
+        registerMorse('6', "10000");
+        registerMorse('7', "11000");
+        registerMorse('8', "11100");
+        registerMorse('9', "11110");
         // Punctuation
-        registeMorse('.', "010101");
-        registeMorse(',', "110011");
-        registeMorse('?', "001100");
-        registeMorse('\'', "011110");
-        registeMorse('!', "101011");
-        registeMorse('/', "10010");
-        registeMorse('(', "10110");
-        registeMorse(')', "101101");
-        registeMorse('&', "01000");
-        registeMorse(':', "111000");
-        registeMorse(';', "101010");
-        registeMorse('=', "10001");
-        registeMorse('+', "01010");
-        registeMorse('-', "100001");
-        registeMorse('_', "001101");
-        registeMorse('"', "010010");
-        registeMorse('$', "0001001");
-        registeMorse('@', "011010");
+        registerMorse('.', "010101");
+        registerMorse(',', "110011");
+        registerMorse('?', "001100");
+        registerMorse('\'', "011110");
+        registerMorse('!', "101011");
+        registerMorse('/', "10010");
+        registerMorse('(', "10110");
+        registerMorse(')', "101101");
+        registerMorse('&', "01000");
+        registerMorse(':', "111000");
+        registerMorse(';', "101010");
+        registerMorse('=', "10001");
+        registerMorse('+', "01010");
+        registerMorse('-', "100001");
+        registerMorse('_', "001101");
+        registerMorse('"', "010010");
+        registerMorse('$', "0001001");
+        registerMorse('@', "011010");
     }
 
     private final char dit; // short mark or dot
