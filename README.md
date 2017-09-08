@@ -1,8 +1,8 @@
 # Java - MorseCoder #
 
 [![Build Status](https://travis-ci.org/TakWolf/Java-MorseCoder.svg?branch=master)](https://travis-ci.org/TakWolf/Java-MorseCoder)
-[![Download](https://api.bintray.com/packages/takwolf/maven/Java-MorseCoder/images/download.svg)](https://bintray.com/takwolf/maven/Java-MorseCoder/_latestVersion)
-[![License](https://img.shields.io/github/license/TakWolf/Java-MorseCoder.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0)
+[![Bintray](https://img.shields.io/bintray/v/takwolf/maven/Java-MorseCoder.svg)](https://bintray.com/takwolf/maven/Java-MorseCoder/_latestVersion)
+[![License](https://img.shields.io/github/license/TakWolf/Java-MorseCoder.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 
 A Java implementation for Morse Code translation. Use non-standard way to support Unicode.
 
