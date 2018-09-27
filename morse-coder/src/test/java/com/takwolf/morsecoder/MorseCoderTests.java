@@ -3,7 +3,7 @@ package com.takwolf.morsecoder;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class MorseCoderTest {
+public class MorseCoderTests {
 
     private final MorseCoder morseCoder = new MorseCoder();
 
