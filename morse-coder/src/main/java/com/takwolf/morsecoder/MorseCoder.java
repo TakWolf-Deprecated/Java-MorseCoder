@@ -2,6 +2,7 @@ package com.takwolf.morsecoder;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.StringTokenizer;
 
 public final class MorseCoder {
 
@@ -91,8 +92,8 @@ public final class MorseCoder {
         if (text == null) {
             throw new IllegalArgumentException("Text should not be null.");
         }
-        text = text.toUpperCase();
         StringBuilder morseBuilder = new StringBuilder();
+        text = text.toUpperCase();
         for (int i = 0; i < text.codePointCount(0, text.length()); i++) {
             int codePoint = text.codePointAt(i);
             String word = alphabets.get(codePoint);
@@ -108,10 +109,10 @@ public final class MorseCoder {
         if (morse == null) {
             throw new IllegalArgumentException("Morse should not be null.");
         }
-        String[] words = morse.split(String.valueOf(split));
         StringBuilder textBuilder = new StringBuilder();
-        for (String word : words) {
-            word = word.replace(dit, '0').replace(dah, '1');
+        StringTokenizer tokenizer = new StringTokenizer(morse, String.valueOf(split));
+        while (tokenizer.hasMoreTokens()) {
+            String word = tokenizer.nextToken().replace(dit, '0').replace(dah, '1');
             Integer codePoint = dictionaries.get(word);
             if (codePoint == null) {
                 codePoint = Integer.valueOf(word, 2);
