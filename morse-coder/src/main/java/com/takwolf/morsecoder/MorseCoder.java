@@ -1,7 +1,5 @@
 package com.takwolf.morsecoder;
 
-import org.apache.commons.lang3.StringUtils;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -110,10 +108,7 @@ public final class MorseCoder {
         if (morse == null) {
             throw new IllegalArgumentException("Morse should not be null.");
         }
-        if (!StringUtils.containsOnly(morse, dit, dah, split)) {
-            throw new IllegalArgumentException("Incorrect morse.");
-        }
-        String[] words = StringUtils.split(morse, split);
+        String[] words = morse.split(String.valueOf(split));
         StringBuilder textBuilder = new StringBuilder();
         for (String word : words) {
             word = word.replace(dit, '0').replace(dah, '1');
