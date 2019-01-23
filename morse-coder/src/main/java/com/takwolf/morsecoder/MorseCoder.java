@@ -95,7 +95,7 @@ public final class MorseCoder {
         StringBuilder morseBuilder = new StringBuilder();
         text = text.toUpperCase();
         for (int i = 0; i < text.codePointCount(0, text.length()); i++) {
-            int codePoint = text.codePointAt(i);
+            int codePoint = text.codePointAt(text.offsetByCodePoints(0, i));
             String word = alphabets.get(codePoint);
             if (word == null) {
                 word = Integer.toBinaryString(codePoint);

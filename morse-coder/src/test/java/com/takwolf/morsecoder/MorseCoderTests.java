@@ -31,4 +31,12 @@ public class MorseCoderTests {
         Assert.assertEquals(morseCoder.decode(morse), text);
     }
 
+    @Test
+    public void test3() {
+        String text = "\uD83D\uDE0D\uD83D\uDE03\uD83D\uDC3B\uD83D\uDD25";
+        String morse = "-----.--.....--.-/-----.--.......--/-----.-....---.--/-----.-.-..-..-.-/";
+        Assert.assertEquals(morseCoder.encode(text), morse);
+        Assert.assertEquals(morseCoder.decode(morse), text);
+    }
+
 }
