@@ -6,7 +6,7 @@ sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
 group 'com.takwolf'
-version '0.0.3'
+version '0.0.4'
 
 dependencies {
     testImplementation 'junit:junit:4.12'
